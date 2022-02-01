@@ -1,0 +1,21 @@
+<section class="w-full max-w-lg">
+  <%= form_with model: @document do |form| %>
+    <%= render partial: "errors", object: @document.errors %>
+    <%= field_set_tag "Access" do %>
+      <%= form.collection_radio_buttons :access, Document.accesses.keys, :to_s, :humanize do |builder| %>
+        <span>
+          <%= builder.radio_button %>
+          <%= builder.label %>
+        </span>
+      <% end %>
+    <% end %>
+    <%= field_set_tag "Passcode protected" do %>
+      <%= form.label :passcode %>
+      <%= form.text_field :passcode, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    <% end %>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+
+    <%= form.button class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  <% end %>
+</section>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_212013) do
+ActiveRecord::Schema.define(version: 2022_02_01_215250) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -104,6 +104,14 @@ ActiveRecord::Schema.define(version: 2022_02_01_212013) do
     t.string "firstname"
     t.string "lastname"
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.integer "access", default: 0, null: false
+    t.text "passcode"
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
