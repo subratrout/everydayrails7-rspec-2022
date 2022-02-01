@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # for Esssential Rails Gem tutsplus
+gem 'bootstrap', '~> 5.1.3'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
@@ -56,7 +57,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-gem 'sunspot_rails'
 gem 'paranoia'
 gem 'sidekiq'
 gem 'hirb'
@@ -79,7 +79,8 @@ group :development do
   gem 'pronto'
   gem 'pronto-rubocop', require: false
   gem 'pronto-flay', require: false
-  
+  gem "better_errors"
+  gem "binding_of_caller"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
