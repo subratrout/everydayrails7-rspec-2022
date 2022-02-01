@@ -441,6 +441,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   hirb
+  image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
   kaminari
